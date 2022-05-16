@@ -21,15 +21,17 @@
  **10. Создать переменную “item_4”**  
  let item_4  
  **11. Присвоить переменной item_4 строку “Yolochka”**  
- let item_4 = "Yolochka"
+ let item_4 = "Yolochka"  
  **12. Вывести в консоль item_4**  
- console.log(item_4)
+ console.log(item_4)  
  **13. Вывести в консоль сложение item_3 и item_4**  
- console.log(item_3 + item_4)
+ console.log(item_3 + item_4)  
  **14. Вывести в консоль умножение item_3 и item_4**  
- 
- 15. Создать переменную “item_5”
- 17. Присвоить переменной item_5 переменную item_3
+ console.log(item_3 * item_4)  
+ **15. Создать переменную “item_5”**  
+ let item_5
+ **7. Присвоить переменной item_5 переменную item_3**  
+ let item_5 = item_3
  18. Создать переменную item_6.
  19. Создать переменную item_6_type
  20. Присвоить переменной item_6 значение 15
