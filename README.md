@@ -61,6 +61,7 @@
  **31. Если age_1 >=  age_2 и age_1 <  age_3, вывести в консоль “Welcome  !”**  
  **32. Если age_1  > age_3, вывести в консоль “Keep calm and look Culture channel”**  
  **33. Иначе выводите “Technical work”**  
+ ```js
  if (age_1 < age_2) {  
     console.log(`You don’t have access cause your age is ${age_1} It’s less then ` + age_2)  
 }  
@@ -73,7 +74,7 @@ else if (age_1  > age_3) {
 else {  
     console.log("Technical work")  
 }  
-
+```
 
 # **HW_1* Задания с разным количеством звездочек:)**
 **1*:**
@@ -84,8 +85,10 @@ const checkAge = function(age)
 Ваши преобразования  
 }  
 Вывести в консоль результат работы функции с возрастами 17, 18, 61**  
+```js
 let age_2 = 18  
 let age_3 = 60  
+
 const checkAge1 = function(age) {  
     if (age < age_2 && age > 0) {  
         console.log(`You don’t have access cause your age is ${age} It’s less then ` + age_2)  
@@ -100,13 +103,17 @@ const checkAge1 = function(age) {
         console.log("Technical work")  
     }  
 }  
+
 checkAge1(17)  
 checkAge1(18)  
-checkAge1(61)  
+checkAge1(61) 
+```
 __**2*:  
 Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка__  
+```js
 let age_2 = 18  
 let age_3 = 60  
+
 const checkAge = function(age) {  
     if (typeof age == 'number') { // Если тип данных число, то выполняется блок ниже  
  
@@ -124,20 +131,23 @@ const checkAge = function(age) {
     }    
 } else {console.log('Error! Wrong data')} // Если тип данных не число, то выводится эта надпись  
 }  
+
 checkAge('25')  
 checkAge(17)  
 checkAge(18)  
-checkAge(61)  
+checkAge(61)
+```
 __3**:
 Преобразовать **2*** таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number__  
 ```js
 let age_2 = 18  
 let age_3 = 60  
+
 const checkAge = function(age) {   
     age = Number(age) // Делает age числом и если строка(string) записана числом, то число из строки становится числом(number)  
     console.log(age) // Стоит для того, чтобы показать все возраста цифрами  
-    if (!isNaN(age))  // функция isNaN проверяет лежит ли в данной функции Not a Number ! переводит проверку с true на false  
-    {         
+    if (!isNaN(age)) { // функция isNaN проверяет лежит ли в данной функции Not a Number ! переводит проверку с true на false  
+             
     if (age < age_2) {  
         console.log(`You don’t have access cause your age is ${age} It’s less then ` + age_2)  
     }  
@@ -152,6 +162,7 @@ const checkAge = function(age) {
     }  
 } else {console.log('Error! Wrong data')}  
 }  
+
 checkAge(17)  
 checkAge('18')  
 checkAge('61fd')  
