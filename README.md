@@ -84,6 +84,8 @@ const checkAge = function(age)
 Ваши преобразования  
 }  
 Вывести в консоль результат работы функции с возрастами 17, 18, 61**  
+let age_2 = 18  
+let age_3 = 60  
 const checkAge1 = function(age) {  
     if (age < age_2 && age > 0) {  
         console.log(`You don’t have access cause your age is ${age} It’s less then ` + age_2)  
@@ -103,9 +105,54 @@ checkAge1(18)
 checkAge1(61)  
 __**2*:  
 Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка__  
-
+let age_2 = 18  
+let age_3 = 60  
+const checkAge = function(age) {  
+    if (typeof age == 'number') { // Если тип данных число, то выполняется блок ниже  
+ 
+    if (age < age_2) {  
+        console.log(`You don’t have access cause your age is ${age} It’s less then ` + age_2)  
+    }  
+    else if (age >= age_2 && age < age_3) {  
+        console.log("Welcome !")  
+    }  
+    else if (age  > age_3) {  
+        console.log("Keep calm and look Culture channel")  
+    }  
+    else {  
+        console.log("Technical work")  
+    }    
+} else {console.log('Error! Wrong data')} // Если тип данных не число, то выводится эта надпись  
+}  
+checkAge('25')  
+checkAge(17)  
+checkAge(18)  
+checkAge(61)  
 __3**:
 Преобразовать **2*** таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number__  
-
+let age_2 = 18  
+let age_3 = 60  
+const checkAge = function(age) {   
+    age = Number(age) // Делает age числом и если строка(string) записана числом, то число из строки становится числом(number)  
+    console.log(age) // Стоит для того, чтобы показать все возраста цифрами  
+    if (!isNaN(age))  // функция isNaN проверяет лежит ли в данной функции Not a Number ! переводит проверку с true на false  
+    {         
+    if (age < age_2) {  
+        console.log(`You don’t have access cause your age is ${age} It’s less then ` + age_2)  
+    }  
+    else if (age >= age_2 && age < age_3) {  
+        console.log("Welcome !")
+    }  
+    else if (age  > age_3) {  
+        console.log("Keep calm and look Culture channel")  
+    }  
+    else {  
+        console.log("Technical work")  
+    }  
+} else {console.log('Error! Wrong data')}  
+}  
+checkAge(17)  
+checkAge('18')  
+checkAge('61fd')  
 ~~4***:
 Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке~~
