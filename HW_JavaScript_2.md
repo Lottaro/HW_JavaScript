@@ -15,7 +15,7 @@ const exponenta1 = function(i) {
     exponenta1(5)
     exponenta1(10)
 ```
-*Вариант 2*
+*Вариант 2, с использованием метода Math.pow()*
 ```js
 let exponenta2 = function(i) {
     console.log(Math.pow(2, i))
