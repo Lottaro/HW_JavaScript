@@ -46,7 +46,6 @@ console.log(s_2+=':)')
 __2*. Преобразовать 2 задачу в функцию, принимающую на вход строку, которая и будет выводиться в консоль (как в условии смайлик), а также количество строк для вывода  
 e.g. function printSmile(stroka, numberOfRows)__  
 ```js
-e.g. function printSmile(stroka, numberOfRows)
 function printSmile(stroka, numberOfRows) {
     for (let i=1; i<=numberOfRows; i++){
         console.log(stroka.repeat(i))
