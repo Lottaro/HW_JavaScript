@@ -69,7 +69,31 @@ e.g. function getWordStructure(word)
 В консоли: 
 Слово (word) состоит из  (число) гласных и (число) согласных букв
 
-Проверки: 'case', 'Case', 'Check-list'
+Проверки: 'case', 'Case', 'Check-list'  
+```js
+console.log('Roman and Andrey'.split(' ')) /* чтобы разбить предложение по словам, нужно поставить разделитель пробел. 
+                                            Если поставить '', то разобъется по буквам */
+console.log([1,2,3,4,5].join('/ _ /'))
+
+
+function getWordStructure(word){
+
+    let vowelsArray = ['a','e','i','o','u','y']
+    let consonantsArray = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z']
+    let tempArray = word.toLowerCase().split('') /*toLowerCase приводит строку в нижний регистр. split разделяет строку в массив, пустые кавычки разделяет
+    строку на отдельные элементы, т. е. букыв*/
+    let vowelsSum = tempArray.filter(x => vowelsArray.includes(x)).length;
+    /*Метод filter() создаёт новый массив с элементами прошедшими проверку
+    Свойство length позволяет узнать длину строки*/ 
+    let consonantsSum = tempArray.filter(x => consonantsArray.includes(x)).length;
+    console.log(`Слово ${word} содержит гласных букв: `+vowelsSum+" и согласных букв: "+consonantsSum) 
+    console.log(tempArray) // выведет введеное слово в виде массива
+    let tempArray2 = tempArray.join(''); // метод join наоборот сливает массив в строку
+    console.log(tempArray2) // выводит наше слово строкой, но внижнем регистре    
+}
+
+getWordStructure('Error word')
+```
 
 4**. Написать функцию, которая проверяет, является ли слово палиндромом
 e.g. function isPalindrom(word)
