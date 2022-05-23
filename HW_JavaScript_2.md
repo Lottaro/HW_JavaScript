@@ -80,8 +80,8 @@ function getWordStructure(word){
 
     let vowelsArray = ['a','e','i','o','u','y']
     let consonantsArray = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z']
-    let tempArray = word.toLowerCase().split('') /*toLowerCase приводит строку в нижний регистр. split разделяет строку в массив, пустые кавычки разделяет
-    строку на отдельные элементы, т. е. букыв*/
+    let tempArray = word.toLowerCase().split('') /*toLowerCase приводит строку в нижний регистр. split разделяет строку в массив, 
+    пустые кавычки разделяет строку на отдельные элементы, т. е. букыв*/
     let vowelsSum = tempArray.filter(x => vowelsArray.includes(x)).length;
     /*Метод filter() создаёт новый массив с элементами прошедшими проверку
     Свойство length позволяет узнать длину строки*/ 
