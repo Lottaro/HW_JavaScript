@@ -1,47 +1,93 @@
-// function yolochka1(item_1, item_2){ // функция
+// Task 1. Написать функцию, которая найдет и выведет в консоль юзеров, зарегистрированных 09.10.2021 и 10.10.2021). Массив в 3.task1.txt
+const users = [ 
+    {
+        firstName: 'John',
+        lastName: 'Caper',
+        phone: '7436676737634',
+        registrationDate: '12.10.2021' 
+    },
+    {
+        firstName: 'Clark',
+        lastName: 'Kent',
+        phone: '4346676737634',
+        registrationDate: '16.09.2021' 
+    },
+    {
+        firstName: 'Tony',
+        lastName: 'Stark',
+        phone: '7436698337634',
+        registrationDate: '11.10.2021'
+    },
+    {
+        firstName: 'Bruce',
+        lastName: 'Wayne',
+        phone: '1111176737634',
+        registrationDate: '09.10.2021'
+    },
+    {
+        firstName: 'Star',
+        lastName: 'Lord',
+        phone: '7439374737634',
+        registrationDate: '10.10.2021'
+    },
+    {
+        firstName: 'Kate',
+        lastName: 'Bishop',
+        phone: '7436693647634',
+        registrationDate: '11.10.2021'
+    },
+    {
+        firstName: 'Jerry',
+        lastName: 'James',
+        phone: '7409048737634',
+        registrationDate: '10.10.2021'
+    },
+    {
+        firstName: 'Jeremy',
+        lastName: 'Clarkson',
+        phone: '743667600289334',
+        registrationDate: '16.10.2020'
+    },
+    {
+        firstName: 'Robert',
+        lastName: 'Patrik',
+        phone: '7436676730093',
+        registrationDate: '10.10.2020'
+    },
+    {
+        firstName: 'Jonny',
+        lastName: 'Sins',
+        phone: '74923982737634',
+        registrationDate: '01.01.2021'
+    },
+    {
+        firstName: 'Andrew',
+        lastName: 'Garfield',
+        phone: '743667988344',
+        registrationDate: '09.10.2019'
+    },
+    {
+        firstName: 'Jane',
+        lastName: 'Foster',
+        phone: '74368783427634',
+        registrationDate: '09.10.2019'
+    },
+    {
+        firstName: 'Rick',
+        lastName: 'Smith',
+        phone: '700000037634',
+        registrationDate: '12.10.2021'
+    },
+];
 
-// let mass = 'Hello!!!'
-// console.log(mass, item_1, item_2)
-// console.log(mass, item_1 + item_2);
+users.forEach(user => {
+    if(user.registrationDate == '10.10.2021') 
+    console.log('Пользователь ' + user.firstName + ' ' + user.lastName + ' зарегистрирован 10.10.2021')
+    else if (user.registrationDate == '09.10.2021')
+    console.log('Пользователь ' + user.firstName + ' ' + user.lastName + ' зарегистрирован 09.10.2021')
+})
 
-// }
-
-// yolochka1(11, 22)
-
-// стрелочная функция
-
-// function f1(){
-//     console.log("Hello")
-// }
-// f1()
-
-// let f11 = () => {console.log("Hello!!!")}
-
-// f11()
-
-let t1 = 10
-let t2 = 20
-let t3 = 30
-let t4 = 40
-
-// let f22 = (t1, t2) => {console.log('Sum = ' + (t1 + t2))}
-
-// f22(t1,t2)
-
-// let f33 = (t1 < t2) ?
-// (t1, t2) => console.log('order = ' , t1 + t2): // если (t1 < t2) true , т.е. выполняется, то первая строка
-// (t1, t2) => console.log('order = ' , t1 - t2); // если не выполняется, то вторая строка
-
-// f33(t3, t4)
-
-// запись обычной функцией посмотреть в лекции
-
-function f55(t1, t2){
-    if (t1 < t2) {
-        console.log('order IF = ', t1 + t2)
-    }
-    else {
-        console.log('order IF = ', t1 - t2)
-    }
-}
-f55(t1, t2)
+users.forEach(user => {
+    if(user.registrationDate == '10.10.2021' || user.registrationDate == '09.10.2021') 
+    console.log('Пользователь ' + user.firstName + ' ' + user.firstName + ` зарегистрирован ${user.registrationDate}`)
+})
