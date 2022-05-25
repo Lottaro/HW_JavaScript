@@ -65,11 +65,11 @@ function printSmile(stroka, numberOfRows) {
 printSmile('(-:-)',6)
 ```
 __3**.  Написать функцию, которая принимает на вход слово. Задача функции посчитать и вывести в консоль, сколько в слове гласных, и сколько согласных букв.
-e.g. function getWordStructure(word)
+e.g. function getWordStructure(word)  
 В консоли: 
 Слово (word) состоит из  (число) гласных и (число) согласных букв__
 
-Проверки: 'case', 'Case', 'Check-list'  
+__Проверки: 'case', 'Case', 'Check-list'__  
 ```js
 console.log('Roman and Andrey'.split(' ')) /* чтобы разбить предложение по словам, нужно поставить разделитель пробел. 
                                            Если поставить '', то разобъется по буквам */
