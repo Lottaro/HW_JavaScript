@@ -80,13 +80,33 @@ const users = [
     },
 ];
 
-users.forEach(user => {
+// вариант 1
+const userFiltered = users.filter((user) => { /* метод filter фильтрует массивпо дате регистрации
+здесь по дате регистрации*/
+    if (user.registrationDate === '09.10.2021' || user.registrationDate === '10.10.2021') {
+        return user;
+    }
+})
+
+console.log(userFiltered)
+
+// вариант 2
+const userFiltered1 = users.filter((user) => {
+    if (user.registrationDate === '09.10.2021' || user.registrationDate === '10.10.2021') {
+        console.log(user.firstName + '/' + user.lastName + '/' + user.registrationDate)   
+    }
+})
+
+// вариант 3
+users.forEach(user => { /* метод forEach() выполняет указанную функцию один раз для каждого элемента в массиве
+здесь сравнивает дату регистрации для каждого элемента массива*/
     if(user.registrationDate == '10.10.2021') 
     console.log('Пользователь ' + user.firstName + ' ' + user.lastName + ' зарегистрирован 10.10.2021')
     else if (user.registrationDate == '09.10.2021')
     console.log('Пользователь ' + user.firstName + ' ' + user.lastName + ' зарегистрирован 09.10.2021')
 })
 
+// вариант 4
 users.forEach(user => {
     if(user.registrationDate == '10.10.2021' || user.registrationDate == '09.10.2021') 
     console.log('Пользователь ' + user.firstName + ' ' + user.firstName + ` зарегистрирован ${user.registrationDate}`)
