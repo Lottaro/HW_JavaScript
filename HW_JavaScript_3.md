@@ -114,3 +114,27 @@ users.forEach(user => {
     console.log('Пользователь ' + user.firstName + ' ' + user.firstName + ` зарегистрирован ${user.registrationDate}`)
 })
 ```
+# __Task 2*__
+
+**Откройте в VSCode task2.json файл. Скопируйте из него JSONку, вставьте в свой код (присвоив в переменную).**  
+
+**Дан массив объектов. Каждый объект является идентификационной карточкой человека. Нам нужно хранить только уникальные значения в этом массиве. Реализуйте функцию, которая будет выполнять эту работу.**  
+```js
+const fs = require('fs');
+const users = JSON.parse(fs.readFileSync("./JS_Lesson_3_HW/3.task2.json"))
+
+let uniquePersons = []
+users.forEach((el) => {
+    if (uniquePersons.indexOf(JSON.stringify(el)) === -1) {
+        uniquePersons.push(JSON.stringify(el));
+    }
+    console.log(uniquePersons)
+});
+
+let chekid = Array.from(new Set(users.map(item => JSON.stringify(item)))).map(item => JSON.parse(item));
+console.log(chekid)
+// Set позволяют вам создавать коллекции значений. Отличия от Array в том, то они могут содержать только уникальные значения
+// Метод JSON.stringify() берет объект JavaScript и трансформирует его в строку JSON.
+// Метод JSON.parse берет строку JSON и трансформирует ее в объект JavaScript
+// Преобразуем JSON в строку затем, что в JSON нет одинаковых объектов, так как они ссылаются на разные ячейки памяти
+```
