@@ -1,7 +1,7 @@
 # **JavaScript**
 
 **Домашнее задание №1**  
-1. HW_JavaScript_1.md 
+1. HW_JavaScript_1.md  
 2. JS_HW_1.js  
 
 # **JavaScript**
